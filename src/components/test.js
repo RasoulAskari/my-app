@@ -10,16 +10,17 @@ export default function DropResume({ message }) {
   const [downloadUrl, setDownloadUrl] = useState("");
 
   const onDrop = useCallback((acceptedFiles) => {
-    setSpin(true);
-    const file = acceptedFiles[0];
-    const mountainsRef = ref(storage, "easyapply/" + file.name);
+    console.log(acceptedFiles);
+    // setSpin(true);
+    // const file = acceptedFiles[0];
+    // const mountainsRef = ref(storage, "easyapply/" + file.name);
 
-    uploadBytesResumable(mountainsRef, file).then((snapshot) => {
-      getDownloadURL(snapshot.ref).then((downloadURL) => {
-        setDownloadUrl(downloadURL);
-        setSpin(false);
-      });
-    });
+    // uploadBytesResumable(mountainsRef, file).then((snapshot) => {
+    //   getDownloadURL(snapshot.ref).then((downloadURL) => {
+    //     setDownloadUrl(downloadURL);
+    //     setSpin(false);
+    //   });
+    // });
   }, []);
   const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
