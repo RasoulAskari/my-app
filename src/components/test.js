@@ -1,3 +1,5 @@
+"use client";
+
 import { useCallback, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import { storage } from "./config";
@@ -18,7 +20,6 @@ export default function DropResume({ message }) {
         setSpin(false);
       });
     });
-    
   }, []);
   const { getRootProps, getInputProps } = useDropzone({ onDrop });
 
