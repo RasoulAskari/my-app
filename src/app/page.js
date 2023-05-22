@@ -1,10 +1,9 @@
 import Image from "next/image";
-import DropResume from "@/components/test";
 
 export default function Home() {
   return (
     <>
-      <DropResume />
+      <h1>This is Home page</h1>
     </>
   );
 }
