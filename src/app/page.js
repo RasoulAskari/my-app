@@ -1,7 +1,14 @@
+"use client";
 import Image from "next/image";
 import { AuthContextProvider } from "../context/AuthContext";
+import { useEffect } from "react";
+import addData from "../firebase/firestore/addData";
 
 export default function Home() {
+  useEffect(() => {
+    handleForm();
+  }, []);
+
   const handleForm = async () => {
     const data = {
       name: "John snow",
