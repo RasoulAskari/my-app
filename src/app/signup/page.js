@@ -2,7 +2,7 @@
 import React from "react";
 import signUp from "../../firebase/auth/signup";
 import { useRouter } from "next/navigation";
-import { Input } from "@mantine/core";
+import { Container, Input } from "@mantine/core";
 
 function Page() {
   const [email, setEmail] = React.useState("");
@@ -23,11 +23,12 @@ function Page() {
     return router.push("/admin");
   };
   return (
-    <div className="wrapper">
+    <Container size="30rem" px={0} mt={50}>
       <div className="form-wrapper">
         <form onSubmit={handleForm} className="form">
           <Input.Wrapper label="Email">
             <Input
+              my={10}
               onChange={(e) => setEmail(e.target.value)}
               required
               type="email"
@@ -50,7 +51,7 @@ function Page() {
           <button type="submit">Sign up</button>
         </form>
       </div>
-    </div>
+    </Container>
   );
 }
 
