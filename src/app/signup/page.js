@@ -37,9 +37,9 @@ function Page() {
               placeholder="example@mail.com"
             />
           </Input.Wrapper>
-          <label htmlFor="password">
-            <p>Password</p>
-            <input
+          <Input.Wrapper label="Password">
+            <Input
+              my={10}
               onChange={(e) => setPassword(e.target.value)}
               required
               type="password"
@@ -47,7 +47,7 @@ function Page() {
               id="password"
               placeholder="password"
             />
-          </label>
+          </Input.Wrapper>
           <button type="submit">Sign up</button>
         </form>
       </div>
