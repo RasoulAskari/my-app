@@ -2,11 +2,10 @@
 import { AuthContextProvider } from "../context/AuthContext";
 import { useEffect } from "react";
 import addData from "../firebase/firestore/addData";
+import { Container } from "@mantine/core";
 
 export default function Home() {
-  useEffect(() => {
-    // handleForm();
-  }, []);
+  useEffect(() => {}, []);
 
   const handleForm = async () => {
     const data = {
@@ -22,7 +21,9 @@ export default function Home() {
 
   return (
     <AuthContextProvider>
-      <h1>This is Home Page</h1>
+      <Container size="30rem" px={0}>
+        This is Home Screen
+      </Container>
     </AuthContextProvider>
   );
 }
