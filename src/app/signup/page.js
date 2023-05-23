@@ -2,7 +2,7 @@
 import React from "react";
 import signUp from "../../firebase/auth/signup";
 import { useRouter } from "next/navigation";
-import { Container, Input } from "@mantine/core";
+import { Button, Container, Input } from "@mantine/core";
 
 function Page() {
   const [email, setEmail] = React.useState("");
@@ -48,7 +48,9 @@ function Page() {
               placeholder="password"
             />
           </Input.Wrapper>
-          <button type="submit">Sign up</button>
+          <Button color="blue" variant="default" type="submit">
+            Sign up
+          </Button>
         </form>
       </div>
     </Container>
