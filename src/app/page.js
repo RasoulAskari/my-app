@@ -21,9 +21,7 @@ export default function Home() {
 
   return (
     <AuthContextProvider>
-      <Container size="30rem" px={0}>
-        This is Home Screen
-      </Container>
+      <Container>This is Home Screen</Container>
     </AuthContextProvider>
   );
 }
