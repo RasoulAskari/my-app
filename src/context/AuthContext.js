@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { onAuthStateChanged, getAuth } from "firebase/auth";
 import firebase_app from "../firebase/config";
