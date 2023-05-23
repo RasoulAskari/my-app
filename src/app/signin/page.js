@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import signIn from "../../firebase/config";
+import signIn from "../../firebase/auth/signin";
 import { useRouter } from "next/navigation";
 
 function Page() {
@@ -48,7 +48,7 @@ function Page() {
               placeholder="password"
             />
           </label>
-          <button type="submit">Sign up</button>
+          <button type="submit">Sign In</button>
         </form>
       </div>
     </div>
