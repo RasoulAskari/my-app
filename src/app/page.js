@@ -1,18 +1,9 @@
-"use client";
-import "./globals.css";
-import { AuthContextProvider } from "@/context/AuthContext";
+import Image from "next/image";
 
-export default function RootLayout({ children }) {
+export default function Home() {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
-      <head />
-      <body>
-        <AuthContextProvider>{children}</AuthContextProvider>
-      </body>
-    </html>
+    <>
+      <h1>This is Home page</h1>
+    </>
   );
 }
