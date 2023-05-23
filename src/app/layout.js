@@ -1,6 +1,7 @@
 "use client";
 import "./globals.css";
 import { AuthContextProvider } from "../context/AuthContext";
+import { Container } from "@mantine/core";
 
 export default function RootLayout({ children }) {
   return (
@@ -11,7 +12,9 @@ export default function RootLayout({ children }) {
       */}
       <head />
       <body>
-        <AuthContextProvider>{children}</AuthContextProvider>
+        <AuthContextProvider>
+          <Container>{children}</Container>
+        </AuthContextProvider>
       </body>
     </html>
   );
