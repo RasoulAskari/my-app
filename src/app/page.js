@@ -3,9 +3,16 @@ import { AuthContextProvider } from "../context/AuthContext";
 import { useEffect } from "react";
 import addData from "../firebase/firestore/addData";
 import { Container } from "@mantine/core";
+import getDoument from "../firebase/firestore/getData";
 
 export default function Home() {
-  useEffect(() => {}, []);
+  useEffect(() => {
+    async function fetchData() {
+      let data = await getDoument("users");
+      console.log(data);
+    }
+    fetchData;
+  }, []);
 
   const handleForm = async () => {
     const data = {
